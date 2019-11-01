@@ -1,1 +1,7 @@
-web: gunicorn webapp:app --log-file=-
+Flask
+itsdangerous
+Jinja2
+MarkupSafe
+Werkzeug
+wheel
+gunicorn
