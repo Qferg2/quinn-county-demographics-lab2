@@ -3,13 +3,13 @@ import os
 import json
 app = Flask(__name__)
 
-get_state_options
+def get_state_options
     listOfStates = []
     for county in counties:
-        if 
-
-
-
+        if county['State'] not in listOfStates:
+            listOfStates.append(county['State'])
+            
+    for 
 
 
 if __name__=="__main__":
