@@ -9,6 +9,13 @@ def render_main():
         counties = json.load(demographics_data)
     return render_template('countyDemo.html', options = get_state_options(counties))
 
+@app.route("/fact")
+def interesting_demo():
+    with open('county_demographics.json') as demographics_data:
+        counties = json.load(demographics_data)
+        state= request.args["state"]
+    return render_template('countyDemo.html', options = get_state_options(counties), demo = get_interesting_demo(counties))
+    
 def get_state_options(counties):
     options = ""
     listOfStates = []
